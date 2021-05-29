@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pothole Detection</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href = "css/style.css"> -->
+    <link rel="stylesheet" href="css/shared.css" />
+    <!-- <script src=""></script> -->
+    <meta lang="en" />
+    <meta name="tagline" content="best site" />
+  </head>
+
+  <body>
+    <!-- <nav class="navbar-inverse">
+            <div class = "container">
+                <div class = "navbar-header">
+                    <button type="button" class = "navbar-toggle" data-toggle="collapse" data-target = "#menu">
+                        <span class= "icon-bar"></span>
+                        <span class= "icon-bar"></span>
+                        <span class= "icon-bar"></span>
+                    </button>
+                    <a>
+                        <img src="images/AsphaltROADIES (2).png" height="56px" alt="AsphaltRoadies">
+                    </a>
+                </div>
+                <div class= "collapse navbar-collapse" id="menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="abcd" style="color:#ffffff" href ="#">NAV</a></li>
+                        <li><a class="abcd" style="color:#ffffff" href ="#">NAV</a></li>
+                        <li><a class="abcd" style="color:#ffffff" href ="#">NAV</a></li>
+                    </ul>
+    
+                </div>
+            </div>
+            
+        </nav> -->
+
+    <header class="main-header">
+      <div class="brand_Container">
+        <a href="#" class="main-header__brand">
+          <img
+            src="images/AsphaltROADIES.png"
+            alt="uHost - Your favorite hosting company"
+          />
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <!-- <li class="main-nav__item">
+            <a href="#">Packages</a>
+          </li> -->
+          <li class="main-nav__item">
+            <a href="/table">Summary</a>
+          </li>
+          <li class="main-nav__item main-nav__item--cta">
+            <a href="/form">Upload</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <div class="map__container">
+        <div class="map" id="map"></div>
+      </div>
+      <div class="btn__containers">
+        <div class="main-nav__item main-nav__item--cta" id="bottom__btns">
+          <a href="/table">Summarise</a>
+        </div>
+
+        <div class="main-nav__item main-nav__item--cta" id="bottom__btns">
+          <a href="/form"">Upload A Pothole</a>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP9H4qUkBEcyDbSB2eBreZr-6YK2-9BVg&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+    <script>
+      function initMap() {
+        const uluru = { lat: -25.344, lng: 131.036 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+
+      //   initMap();
+    </script>
+  </body>
+</html>

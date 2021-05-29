@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    <div id="overlay"></div>
+    <div class="row">
+    <div class="col-md-12">
+      <form action="/analyze" method="post">
+        <div class="loader" id="loader"></div>
+        <h1>Enter the Details</h1>
+        <fieldset>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+        
+          <label for="email">Email:</label>
+          <input type="email" id="mail" name="user_email">
+          <input type="hidden" name="location" id="location" value="">
+          <input type="hidden" name="image" id="image" value="" />
+          <label for="img">Click image:</label>
+          <!-- ------------------------------------------------------- -->
+          
+          <img src="" alt="clicked_image" id="clicked_image" />
+          <video src="" id="video" autoplay></video>
+          <button id="clickbtn2">Camera</button>
+          <button id="clickbtn">Click</button>
+
+        </fieldset>
+        <button type="submit" id="submitBtn" style="display: none;">Submit</button>
+       </form>
+        </div>
+      </div>
+
+      <script src="js/script.js"></script>
+    </body>
+</html>
+
+
+<!-- <input type="file" id="img" name="img" accept="image/*"> -->
+          <!-- <p>   </p>
+          <label for="location">Location Line 1:</label>
+          <input type="text" id="location" name="Location">
+          <label for="location">Location Line 2:</label>
+          <input type="text" id="location" name="Location"> -->
